@@ -15,7 +15,7 @@ namespace Benchmarks.Benchamarks
             File.WriteAllBytes(fileName, data);
             File.Delete(fileName);
             stopwatch.Stop();
-            Console.WriteLine(nameof(BadWriteTempFile) + " " + stopwatch.ElapsedMilliseconds);
+            Console.WriteLine("Writing 64Mega file in temp and delete it:" + stopwatch.ElapsedMilliseconds);
         }
 
         public static void BetterWriteTempFile()
@@ -31,7 +31,7 @@ namespace Benchmarks.Benchamarks
                 File.Delete(fileName);
                 stopwatch.Stop();
                 measurements[i] = stopwatch.ElapsedMilliseconds;
-                Console.WriteLine(nameof(BetterWriteTempFile) + " " + measurements[i]);
+                Console.WriteLine("Writing 64Mega file in temp and delete it in a loop:" + measurements[i]);
             }
             Console.WriteLine("Minimum = " + measurements.Min());
             Console.WriteLine("Maximum = " + measurements.Max());

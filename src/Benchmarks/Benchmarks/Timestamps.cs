@@ -2,33 +2,33 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace Benchmarks.Benchamarks
+namespace Benchmarks.Benchmarks
 {
     public static class Timestamps
     {
-        public static void HelloWorld()
+        public static void IntroTimestamp()
         {
-            Console.WriteLine("HelloWorld");
+            Console.WriteLine("Advice: prefer Stopwatch over DateTime");
         }
 
-        public static void SortBad()
+        public static void SortBad(int count)
         {
-            var list = Enumerable.Range(0, 10000).ToList();
+            var list = Enumerable.Range(0, count).ToList();
             DateTime start = DateTime.Now;
             list.Sort();
             DateTime end = DateTime.Now;
             TimeSpan elapsedTime = end - start;
-            Console.WriteLine(nameof(DateTime) + " " + elapsedTime.TotalMilliseconds);
+            Console.WriteLine($"Benchmark sort {count} elements with DateTime :" + elapsedTime.TotalMilliseconds);
         }
 
-        public static void SortBetter()
+        public static void SortBetter(int count)
         {
-            var list = Enumerable.Range(0, 10000).ToList();
+            var list = Enumerable.Range(0, count).ToList();
             var stopwatch = Stopwatch.StartNew();
             list.Sort();
             stopwatch.Stop();
             TimeSpan elapsedTime = stopwatch.Elapsed;
-            Console.WriteLine(nameof(Stopwatch) + " " + elapsedTime.TotalMilliseconds);
+            Console.WriteLine($"Benchmark sort {count} elements with StopWatch :" + elapsedTime.TotalMilliseconds);
         }
     }
 }

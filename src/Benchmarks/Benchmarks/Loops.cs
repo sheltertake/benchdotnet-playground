@@ -6,14 +6,26 @@ namespace Benchmarks.Benchamarks
     public static class Loops
     {
 
-        public static void BadLoop()
+        public static void LoopEmpty()
         {
             var stopwatch = Stopwatch.StartNew();
             for (int i = 0; i < 100000000; i++)
             {
             }
             stopwatch.Stop();
-            Console.WriteLine(nameof(BadLoop) + " " + stopwatch.ElapsedMilliseconds);
+            Console.WriteLine("LoopEmpty 100.000.000: " + stopwatch.ElapsedMilliseconds);
+        }
+
+        public static void LoopWithBody()
+        {
+            var o = 0;
+            var stopwatch = Stopwatch.StartNew();
+            for (int i = 0; i < 100000000; i++)
+            {
+                o++;
+            }
+            stopwatch.Stop();
+            Console.WriteLine($"LoopWithBody {o}: " + stopwatch.ElapsedMilliseconds);
         }
     }
 }
