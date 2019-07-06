@@ -6,10 +6,6 @@ namespace Benchmarks.Benchmarks
 {
     public static class Timestamps
     {
-        public static void IntroTimestamp()
-        {
-            Console.WriteLine("Advice: prefer Stopwatch over DateTime");
-        }
 
         public static void SortBad(int count)
         {
