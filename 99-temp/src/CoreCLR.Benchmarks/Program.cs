@@ -10,9 +10,11 @@ namespace CoreCLR.Benchmarks
         static void Main(string[] args)
         {
             //var benchmark = BenchmarkRunner.Run<StructVsClassTest>();
-            //BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args, new DebugInProcessConfig());
-
+#if DEBUG
+            BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args, new DebugInProcessConfig());
+#else
             BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args);
+#endif
             Console.WriteLine("Benchmark finished. Press any key to exit...");
             Console.ReadKey();
         }

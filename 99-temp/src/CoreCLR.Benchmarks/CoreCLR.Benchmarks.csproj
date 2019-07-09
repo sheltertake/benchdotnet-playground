@@ -12,4 +12,8 @@
     <PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.11.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StructVsClassLib\StructVsClassLib.csproj" />
+  </ItemGroup>
+
 </Project>
