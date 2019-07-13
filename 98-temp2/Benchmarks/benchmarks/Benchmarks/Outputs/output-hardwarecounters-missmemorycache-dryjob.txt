@@ -1,0 +1,994 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 16 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf
+// command took 5,86s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf
+// command took 8,41s and exited with 0
+// ***** Done, took 00:00:15 (15.88 sec)   *****
+// Found 16 benchmarks:
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=1]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=2]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=4]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=8]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=16]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=32]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=64]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=128]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=256]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=512]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=1024]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=2048]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=4096]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=8192]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=16384]
+//   CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=32768]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Prestazioni elevate)// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=1]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 1)" --job "DryCore" --benchmarkId 0 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 24699100.00 ns, 24.6991 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 24699100.00 ns, 24.6991 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 1)" --job "DryCore" --benchmarkId 0 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 25792600.00 ns, 25.7926 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 25792600.00 ns, 25.7926 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 24.6991 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 24.6991 ms, Q1 = 24.6991 ms, Median = 24.6991 ms, Q3 = 24.6991 ms, Max = 24.6991 ms
+IQR = 0.0000 ms, LowerFence = 24.6991 ms, UpperFence = 24.6991 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 2)" --job "DryCore" --benchmarkId 1 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 50012200.00 ns, 50.0122 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 50012200.00 ns, 50.0122 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 2)" --job "DryCore" --benchmarkId 1 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 32259100.00 ns, 32.2591 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 32259100.00 ns, 32.2591 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 50.0122 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 50.0122 ms, Q1 = 50.0122 ms, Median = 50.0122 ms, Q3 = 50.0122 ms, Max = 50.0122 ms
+IQR = 0.0000 ms, LowerFence = 50.0122 ms, UpperFence = 50.0122 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 4)" --job "DryCore" --benchmarkId 2 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 31042700.00 ns, 31.0427 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 31042700.00 ns, 31.0427 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 4)" --job "DryCore" --benchmarkId 2 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 25173400.00 ns, 25.1734 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 25173400.00 ns, 25.1734 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 31.0427 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 31.0427 ms, Q1 = 31.0427 ms, Median = 31.0427 ms, Q3 = 31.0427 ms, Max = 31.0427 ms
+IQR = 0.0000 ms, LowerFence = 31.0427 ms, UpperFence = 31.0427 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 8)" --job "DryCore" --benchmarkId 3 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 24592100.00 ns, 24.5921 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 24592100.00 ns, 24.5921 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 8)" --job "DryCore" --benchmarkId 3 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 33128000.00 ns, 33.1280 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 33128000.00 ns, 33.1280 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 24.5921 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 24.5921 ms, Q1 = 24.5921 ms, Median = 24.5921 ms, Q3 = 24.5921 ms, Max = 24.5921 ms
+IQR = 0.0000 ms, LowerFence = 24.5921 ms, UpperFence = 24.5921 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=16]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 16)" --job "DryCore" --benchmarkId 4 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 34337600.00 ns, 34.3376 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 34337600.00 ns, 34.3376 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 16)" --job "DryCore" --benchmarkId 4 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 45291200.00 ns, 45.2912 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 45291200.00 ns, 45.2912 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 34.3376 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 34.3376 ms, Q1 = 34.3376 ms, Median = 34.3376 ms, Q3 = 34.3376 ms, Max = 34.3376 ms
+IQR = 0.0000 ms, LowerFence = 34.3376 ms, UpperFence = 34.3376 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=32]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 32)" --job "DryCore" --benchmarkId 5 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 44460700.00 ns, 44.4607 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 44460700.00 ns, 44.4607 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 32)" --job "DryCore" --benchmarkId 5 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 30031600.00 ns, 30.0316 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 30031600.00 ns, 30.0316 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 44.4607 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 44.4607 ms, Q1 = 44.4607 ms, Median = 44.4607 ms, Q3 = 44.4607 ms, Max = 44.4607 ms
+IQR = 0.0000 ms, LowerFence = 44.4607 ms, UpperFence = 44.4607 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=64]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 64)" --job "DryCore" --benchmarkId 6 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 52482700.00 ns, 52.4827 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 52482700.00 ns, 52.4827 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 64)" --job "DryCore" --benchmarkId 6 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 45396500.00 ns, 45.3965 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 45396500.00 ns, 45.3965 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 52.4827 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 52.4827 ms, Q1 = 52.4827 ms, Median = 52.4827 ms, Q3 = 52.4827 ms, Max = 52.4827 ms
+IQR = 0.0000 ms, LowerFence = 52.4827 ms, UpperFence = 52.4827 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=128]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 128)" --job "DryCore" --benchmarkId 7 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 65293800.00 ns, 65.2938 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 65293800.00 ns, 65.2938 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 128)" --job "DryCore" --benchmarkId 7 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 78611000.00 ns, 78.6110 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 78611000.00 ns, 78.6110 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 65.2938 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 65.2938 ms, Q1 = 65.2938 ms, Median = 65.2938 ms, Q3 = 65.2938 ms, Max = 65.2938 ms
+IQR = 0.0000 ms, LowerFence = 65.2938 ms, UpperFence = 65.2938 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=256]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 256)" --job "DryCore" --benchmarkId 8 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 47128400.00 ns, 47.1284 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 47128400.00 ns, 47.1284 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 256)" --job "DryCore" --benchmarkId 8 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 46534800.00 ns, 46.5348 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 46534800.00 ns, 46.5348 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 47.1284 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 47.1284 ms, Q1 = 47.1284 ms, Median = 47.1284 ms, Q3 = 47.1284 ms, Max = 47.1284 ms
+IQR = 0.0000 ms, LowerFence = 47.1284 ms, UpperFence = 47.1284 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=512]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 512)" --job "DryCore" --benchmarkId 9 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 86823200.00 ns, 86.8232 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 86823200.00 ns, 86.8232 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 512)" --job "DryCore" --benchmarkId 9 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 63276200.00 ns, 63.2762 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 63276200.00 ns, 63.2762 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 86.8232 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 86.8232 ms, Q1 = 86.8232 ms, Median = 86.8232 ms, Q3 = 86.8232 ms, Max = 86.8232 ms
+IQR = 0.0000 ms, LowerFence = 86.8232 ms, UpperFence = 86.8232 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=1024]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 1024)" --job "DryCore" --benchmarkId 10 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 65725300.00 ns, 65.7253 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 65725300.00 ns, 65.7253 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 1024)" --job "DryCore" --benchmarkId 10 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 67727000.00 ns, 67.7270 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 67727000.00 ns, 67.7270 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 65.7253 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 65.7253 ms, Q1 = 65.7253 ms, Median = 65.7253 ms, Q3 = 65.7253 ms, Max = 65.7253 ms
+IQR = 0.0000 ms, LowerFence = 65.7253 ms, UpperFence = 65.7253 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=2048]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 2048)" --job "DryCore" --benchmarkId 11 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 68851500.00 ns, 68.8515 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 68851500.00 ns, 68.8515 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 2048)" --job "DryCore" --benchmarkId 11 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 136643400.00 ns, 136.6434 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 136643400.00 ns, 136.6434 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 68.8515 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 68.8515 ms, Q1 = 68.8515 ms, Median = 68.8515 ms, Q3 = 68.8515 ms, Max = 68.8515 ms
+IQR = 0.0000 ms, LowerFence = 68.8515 ms, UpperFence = 68.8515 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=4096]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 4096)" --job "DryCore" --benchmarkId 12 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 318998800.00 ns, 318.9988 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 318998800.00 ns, 318.9988 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 4096)" --job "DryCore" --benchmarkId 12 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 279788700.00 ns, 279.7887 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 279788700.00 ns, 279.7887 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 318.9988 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 318.9988 ms, Q1 = 318.9988 ms, Median = 318.9988 ms, Q3 = 318.9988 ms, Max = 318.9988 ms
+IQR = 0.0000 ms, LowerFence = 318.9988 ms, UpperFence = 318.9988 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=8192]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 8192)" --job "DryCore" --benchmarkId 13 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 292229600.00 ns, 292.2296 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 292229600.00 ns, 292.2296 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 8192)" --job "DryCore" --benchmarkId 13 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 287588200.00 ns, 287.5882 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 287588200.00 ns, 287.5882 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 292.2296 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 292.2296 ms, Q1 = 292.2296 ms, Median = 292.2296 ms, Q3 = 292.2296 ms, Max = 292.2296 ms
+IQR = 0.0000 ms, LowerFence = 292.2296 ms, UpperFence = 292.2296 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=16384]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 16384)" --job "DryCore" --benchmarkId 14 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 221963800.00 ns, 221.9638 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 221963800.00 ns, 221.9638 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 16384)" --job "DryCore" --benchmarkId 14 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 295754200.00 ns, 295.7542 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 295754200.00 ns, 295.7542 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 221.9638 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 221.9638 ms, Q1 = 221.9638 ms, Median = 221.9638 ms, Q3 = 221.9638 ms, Max = 221.9638 ms
+IQR = 0.0000 ms, LowerFence = 221.9638 ms, UpperFence = 221.9638 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// **************************
+// Benchmark: CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=32768]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 32768)" --job "DryCore" --benchmarkId 15 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 343687000.00 ns, 343.6870 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 343687000.00 ns, 343.6870 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+// Run, Diagnostic
+// Execute: dotnet "f8101640-3709-468e-9095-5ff3b13247bf.dll" --benchmarkName "Benchmarks.Benchmarks.CacheMissesBenchmarks.Calc(SizeKb: 32768)" --job "DryCore" --benchmarkId 15 in C:\GIT\benchdotnet-playground\98-temp2\Benchmarks\benchmarks\Benchmarks\bin\Release\netcoreapp2.2\f8101640-3709-468e-9095-5ff3b13247bf\bin\Release\netcoreapp2.2
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 314741500.00 ns, 314.7415 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 314741500.00 ns, 314.7415 ms/op
+GC:  0 0 0 0 0
+
+// AfterAll
+
+Mean = 343.6870 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 343.6870 ms, Q1 = 343.6870 ms, Median = 343.6870 ms, Q3 = 343.6870 ms, Max = 343.6870 ms
+IQR = 0.0000 ms, LowerFence = 343.6870 ms, UpperFence = 343.6870 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Prestazioni elevate)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Benchmarks.Benchmarks.CacheMissesBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\Benchmarks.Benchmarks.CacheMissesBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\Benchmarks.Benchmarks.CacheMissesBenchmarks-report.html
+
+// * Detailed results *
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=1]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 24.6991 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 24.6991 ms, Q1 = 24.6991 ms, Median = 24.6991 ms, Q3 = 24.6991 ms, Max = 24.6991 ms
+IQR = 0.0000 ms, LowerFence = 24.6991 ms, UpperFence = 24.6991 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[24.699 ms ; 24.699 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=2]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 50.0122 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 50.0122 ms, Q1 = 50.0122 ms, Median = 50.0122 ms, Q3 = 50.0122 ms, Max = 50.0122 ms
+IQR = 0.0000 ms, LowerFence = 50.0122 ms, UpperFence = 50.0122 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[50.012 ms ; 50.012 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=4]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 31.0427 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 31.0427 ms, Q1 = 31.0427 ms, Median = 31.0427 ms, Q3 = 31.0427 ms, Max = 31.0427 ms
+IQR = 0.0000 ms, LowerFence = 31.0427 ms, UpperFence = 31.0427 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[31.043 ms ; 31.043 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=8]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 24.5921 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 24.5921 ms, Q1 = 24.5921 ms, Median = 24.5921 ms, Q3 = 24.5921 ms, Max = 24.5921 ms
+IQR = 0.0000 ms, LowerFence = 24.5921 ms, UpperFence = 24.5921 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[24.592 ms ; 24.592 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=16]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 34.3376 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 34.3376 ms, Q1 = 34.3376 ms, Median = 34.3376 ms, Q3 = 34.3376 ms, Max = 34.3376 ms
+IQR = 0.0000 ms, LowerFence = 34.3376 ms, UpperFence = 34.3376 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[34.338 ms ; 34.338 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=32]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 44.4607 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 44.4607 ms, Q1 = 44.4607 ms, Median = 44.4607 ms, Q3 = 44.4607 ms, Max = 44.4607 ms
+IQR = 0.0000 ms, LowerFence = 44.4607 ms, UpperFence = 44.4607 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[44.461 ms ; 44.461 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=64]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 52.4827 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 52.4827 ms, Q1 = 52.4827 ms, Median = 52.4827 ms, Q3 = 52.4827 ms, Max = 52.4827 ms
+IQR = 0.0000 ms, LowerFence = 52.4827 ms, UpperFence = 52.4827 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[52.483 ms ; 52.483 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=128]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 65.2938 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 65.2938 ms, Q1 = 65.2938 ms, Median = 65.2938 ms, Q3 = 65.2938 ms, Max = 65.2938 ms
+IQR = 0.0000 ms, LowerFence = 65.2938 ms, UpperFence = 65.2938 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[65.294 ms ; 65.294 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=256]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 47.1284 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 47.1284 ms, Q1 = 47.1284 ms, Median = 47.1284 ms, Q3 = 47.1284 ms, Max = 47.1284 ms
+IQR = 0.0000 ms, LowerFence = 47.1284 ms, UpperFence = 47.1284 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[47.128 ms ; 47.128 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=512]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 86.8232 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 86.8232 ms, Q1 = 86.8232 ms, Median = 86.8232 ms, Q3 = 86.8232 ms, Max = 86.8232 ms
+IQR = 0.0000 ms, LowerFence = 86.8232 ms, UpperFence = 86.8232 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[86.823 ms ; 86.823 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=1024]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 65.7253 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 65.7253 ms, Q1 = 65.7253 ms, Median = 65.7253 ms, Q3 = 65.7253 ms, Max = 65.7253 ms
+IQR = 0.0000 ms, LowerFence = 65.7253 ms, UpperFence = 65.7253 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[65.725 ms ; 65.725 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=2048]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 68.8515 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 68.8515 ms, Q1 = 68.8515 ms, Median = 68.8515 ms, Q3 = 68.8515 ms, Max = 68.8515 ms
+IQR = 0.0000 ms, LowerFence = 68.8515 ms, UpperFence = 68.8515 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[68.851 ms ; 68.852 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=4096]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 318.9988 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 318.9988 ms, Q1 = 318.9988 ms, Median = 318.9988 ms, Q3 = 318.9988 ms, Max = 318.9988 ms
+IQR = 0.0000 ms, LowerFence = 318.9988 ms, UpperFence = 318.9988 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[318.999 ms ; 318.999 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=8192]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 292.2296 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 292.2296 ms, Q1 = 292.2296 ms, Median = 292.2296 ms, Q3 = 292.2296 ms, Max = 292.2296 ms
+IQR = 0.0000 ms, LowerFence = 292.2296 ms, UpperFence = 292.2296 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[292.230 ms ; 292.230 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=16384]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 221.9638 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 221.9638 ms, Q1 = 221.9638 ms, Median = 221.9638 ms, Q3 = 221.9638 ms, Max = 221.9638 ms
+IQR = 0.0000 ms, LowerFence = 221.9638 ms, UpperFence = 221.9638 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[221.964 ms ; 221.964 ms) | @
+---------------------------------------------------
+
+CacheMissesBenchmarks.Calc: DryCore(Runtime=Core, IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1, WarmupCount=1) [SizeKb=32768]
+Runtime = .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 343.6870 ms, StdErr = 0.0000 ms (0.00%); N = 1, StdDev = 0.0000 ms
+Min = 343.6870 ms, Q1 = 343.6870 ms, Median = 343.6870 ms, Q3 = 343.6870 ms, Max = 343.6870 ms
+IQR = 0.0000 ms, LowerFence = 343.6870 ms, UpperFence = 343.6870 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[343.687 ms ; 343.687 ms) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=Windows 10.0.17134.885 (1803/April2018Update/Redstone4)
+Intel Core i5-5200U CPU 2.20GHz (Broadwell), 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=2.2.301
+  [Host]  : .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+  DryCore : .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
+
+Job=DryCore  Runtime=Core  IterationCount=1  
+LaunchCount=1  RunStrategy=ColdStart  UnrollFactor=1  
+WarmupCount=1  
+
+| Method | SizeKb |      Mean | Error | CacheMisses/Op |
+|------- |------- |----------:|------:|---------------:|
+|   Calc |      1 |  24.70 ms |    NA |        108,544 |
+|   Calc |      2 |  50.01 ms |    NA |        180,224 |
+|   Calc |      4 |  31.04 ms |    NA |        129,024 |
+|   Calc |      8 |  24.59 ms |    NA |        180,224 |
+|   Calc |     16 |  34.34 ms |    NA |        276,480 |
+|   Calc |     32 |  44.46 ms |    NA |        116,736 |
+|   Calc |     64 |  52.48 ms |    NA |        137,216 |
+|   Calc |    128 |  65.29 ms |    NA |        309,248 |
+|   Calc |    256 |  47.13 ms |    NA |        114,688 |
+|   Calc |    512 |  86.82 ms |    NA |        169,984 |
+|   Calc |   1024 |  65.73 ms |    NA |        163,840 |
+|   Calc |   2048 |  68.85 ms |    NA |      2,639,872 |
+|   Calc |   4096 | 319.00 ms |    NA |      7,907,328 |
+|   Calc |   8192 | 292.23 ms |    NA |      8,615,936 |
+|   Calc |  16384 | 221.96 ms |    NA |      8,685,568 |
+|   Calc |  32768 | 343.69 ms |    NA |      8,718,336 |
+
+// * Warnings *
+MinIterationTime
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 24.6991 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 50.0122 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 31.0427 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 24.5921 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 34.3376 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 44.4607 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 52.4827 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 65.2938 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 47.1284 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 86.8232 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 65.7253 ms which is very small. It's recommended to increase it.
+  CacheMissesBenchmarks.Calc: DryCore -> The minimum observed iteration time is 68.8515 ms which is very small. It's recommended to increase it.
+
+// * Legends *
+  SizeKb         : Value of the 'SizeKb' parameter
+  Mean           : Arithmetic mean of all measurements
+  Error          : Half of 99.9% confidence interval
+  CacheMisses/Op : Hardware counter 'CacheMisses' per single operation
+  1 ms           : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - PmcDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:01:14 (74.47 sec), executed benchmarks: 16
+
+Global total time: 00:01:30 (90.37 sec), executed benchmarks: 16
+// * Artifacts cleanup *
