@@ -3,6 +3,11 @@ using BenchmarkDotNet.Diagnosers;
 
 namespace Benchmarks.Benchmarks
 {
+    /*
+     *
+    dotnet run -c Release -f netcoreapp2.2 --filter *CacheMissesBenchmarks* > Outputs/output-hardwarecounters-missmemorycache-dryjob.txt
+    dotnet run -c Release -f netcoreapp2.2 --filter *CacheMissesBenchmarks* > Outputs/output-hardwarecounters-missmemorycache-customjob.txt
+     */
     [HardwareCounters(HardwareCounter.CacheMisses)]
     //[DryCoreJob]
     [SimpleJob(
