@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MemoryUsageApi.Controllers
+namespace MemoryUsageApi2.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

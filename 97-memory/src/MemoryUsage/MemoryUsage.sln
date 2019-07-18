@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsageApi", "MemoryUsa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsageCli", "MemoryUsageCli\MemoryUsageCli.csproj", "{B3BA520F-B9FC-48E3-9688-5F7D59EBEF75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpuStress", "CpuStress\CpuStress.csproj", "{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpuStress", "CpuStress\CpuStress.csproj", "{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryStress", "MemoryStress\MemoryStress.csproj", "{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryStress", "MemoryStress\MemoryStress.csproj", "{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsageApi2", "MemoryUsageApi2\MemoryUsageApi2.csproj", "{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
