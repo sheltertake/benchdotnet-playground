@@ -22,26 +22,42 @@ namespace MemoryUsageGenerationType
         //24 bytes on a 64 bit system
         
         //7 bytes? for me
-        private static MyClassArrayLoh[] myArrayOfClassLoh = Enumerable.Repeat(new MyClassArrayLoh(), 11000).ToArray();
-        private static MyClassArrayGen2[] myArrayOfClassGen2 = Enumerable.Repeat(new MyClassArrayGen2(), 10000).ToArray();
+        private static MyClassArrayLoh[] myArrayOfClassLoh = Enumerable.Repeat(new MyClassArrayLoh(), 10900).ToArray();//88k - FEW - 
+        private static MyClassArrayGen2[] myArrayOfClassGen2 = Enumerable.Repeat(new MyClassArrayGen2(), 10500).ToArray();//80K - FEW + 
 
-        private static List<MyClassListLoh> myListOfClassLoh = Enumerable.Repeat(new MyClassListLoh(), 11000).ToList();
-        private static List<MyClassListGen2> myListOfClassGen2 = Enumerable.Repeat(new MyClassListGen2(), 10000).ToList();
+        //private static List<MyClassListLoh> myListOfClassLoh = Enumerable.Repeat(new MyClassListLoh(), 11000).ToList();//88k - NO DIFFERENCES btw list & array (few B)
+        //private static List<MyClassListGen2> myListOfClassGen2 = Enumerable.Repeat(new MyClassListGen2(), 10000).ToList();//80K
 
-        private static List<MyRealWorldClass> myListOfRealWorldClassLoh = Enumerable.Repeat(new MyRealWorldClass(), 11000).ToList();
-        private static List<MyRealWorldGen> myListOfRealWorldClassGen2 = Enumerable.Repeat(new MyRealWorldGen(), 1000).ToList();
+        private static List<MyRealWorldLoh> myListOfRealWorldClassLoh = Enumerable.Repeat(new MyRealWorldLoh(), 10900).ToList();//89k - 64|948 - FEW -
+        private static List<MyRealWorldGen> myListOfRealWorldClassGen2 = Enumerable.Repeat(new MyRealWorldGen(), 9500).ToList();//9K - 64|948 - KO
 
-        //private static List<MyRealWorldClass> myListOfRealWorldClassLoh = Enumerable.Repeat(new MyRealWorldClass(), 11000).ToList();
-        //private static List<MyRealWorldGen> myListOfRealWorldClassGen2 = Enumerable.Repeat(new MyRealWorldGen(), 1000).ToList();
+        private static List<MyStructEmptyLoh> myListMyStructEmptyLoh = Enumerable.Repeat(new MyStructEmptyLoh(), 85000).ToList();//85k OK
+        private static List<MyStructEmptyGen> myListMyStructEmptyGen = Enumerable.Repeat(new MyStructEmptyGen(), 84000).ToList();//84K OK
+
+        private static List<MyRealWorldStructLoh> myListMyRealWorlStructLoh = Enumerable.Repeat(new MyRealWorldStructLoh(), 4500).ToList();//220k - VERY FEW
+        private static List<MyRealWorldStructGen> myListMyRealWorlStructGen = Enumerable.Repeat(new MyRealWorldStructGen(), 5500).ToList();//176k - VERY FEW
+
 
         static void Main(string[] args)
         {
+            var stru = new MySingleRealWorldStruct(); 
             while (true)
             {
                 Console.WriteLine(myString84almostk.Length + " " + myString85k.Length);
+
                 Console.WriteLine(myArrayOfClassLoh.Length + " " + myArrayOfClassGen2.Length);
-                Console.WriteLine(myListOfClassLoh.Count + " " + myListOfClassGen2.Count);
+                //Console.WriteLine(myListOfClassLoh.Count + " " + myListOfClassGen2.Count);
+
                 Console.WriteLine(myListOfRealWorldClassLoh.Count + " " + myListOfRealWorldClassGen2.Count);
+
+                Console.WriteLine(myListMyStructEmptyLoh.Count + " " + myListMyStructEmptyGen.Count);
+                Console.WriteLine("MyStructEmptyLoh len:" + System.Runtime.InteropServices.Marshal.SizeOf(typeof(MyStructEmptyLoh)));
+                Console.WriteLine(myListMyRealWorlStructLoh.Count + " " + myListMyRealWorlStructGen.Count);
+                Console.WriteLine("MyRealWorldStructGen len:" + System.Runtime.InteropServices.Marshal.SizeOf(typeof(MyRealWorldStructGen)));
+                Console.WriteLine("MyRealWorldStructLoh len:" + System.Runtime.InteropServices.Marshal.SizeOf(typeof(MyRealWorldStructLoh)));
+                Console.WriteLine("stru len:" + System.Runtime.InteropServices.Marshal.SizeOf(typeof(MySingleRealWorldStruct)));
+                //Console.WriteLine("MyRealWorldLoh len:" + System.Runtime.InteropServices.Marshal.SizeOf(typeof(MyRealWorldLoh)));
+                
                 var input = Console.ReadLine();
                 if (input.Equals("exit", StringComparison.OrdinalIgnoreCase))
                 {
@@ -68,23 +84,86 @@ namespace MemoryUsageGenerationType
     public class MyClassListGen2{}
 
 
-    public class MyRealWorldGen : MyRealWorldClass { }
-    public class MyRealWorldClass
+    public class MyRealWorldGen : MyRealWorldLoh { }
+    public class MyRealWorldLoh
     {
         public int Id { get; set; } //4
+        public int Id2 { get; set; } //4
+        public int Id3 { get; set; } //4
+        public int Id4 { get; set; } //4
+        public int Id5 { get; set; } //4
         public string Name { get; set; }
         public string Surname { get; set; }
         public string CountryCode { get; set; }
 
-        public MyRealWorldClass()
+        public MyRealWorldLoh()
         {
             Id = RandomHelper.random.Next();
+            Id2 = RandomHelper.random.Next();
+            Id3 = RandomHelper.random.Next();
+            Id4 = RandomHelper.random.Next();
+            Id5 = RandomHelper.random.Next();
             Name = RandomHelper.RandomString(200);
             Surname = RandomHelper.RandomString(200);
             CountryCode = RandomHelper.RandomString(3);
         }
     }
 
-    //public struct MyRealWorlStructEmptyLoh { }
-    //public struct MyRealWorlStructEmptyGen { }
+    //So the size of your struct is 8+4=12 (both x86 and x64).
+    public struct MyStructEmptyLoh { }
+    public struct MyStructEmptyGen { }
+    //https://stackoverflow.com/questions/3729873/problem-with-struct-and-property-in-c-sharp
+    public struct MySingleRealWorldStruct
+    {
+        public readonly int I1;
+        public readonly int I2;
+        public readonly int I3;
+        public readonly int I4;
+
+        public MySingleRealWorldStruct(int i1, int i2, int i3, int i4)
+        {
+            I1 = i1;
+            I2 = i2;
+            I3 = i3;
+            I4 = i4;
+        }
+
+    }
+    public struct MyRealWorldStructLoh
+    {
+        
+        public readonly int I1;
+        public readonly int I2;
+        public readonly int I3;
+        public readonly int I4;
+        public readonly int I5;
+
+        public MyRealWorldStructLoh(int i1, int i2, int i3, int i4, int i5)
+        {
+            I1 = i1;
+            I2 = i2;
+            I3 = i3;
+            I4 = i4;
+            I5 = i5;
+        }
+
+    }
+    //https://stackoverflow.com/questions/3729873/problem-with-struct-and-property-in-c-sharp
+    public struct MyRealWorldStructGen
+    {
+
+        public readonly int I1;
+        public readonly int I2;
+        public readonly int I3;
+        public readonly int I4;
+
+        public MyRealWorldStructGen(int i1, int i2, int i3, int i4)
+        {
+            I1 = i1;
+            I2 = i2;
+            I3 = i3;
+            I4 = i4;
+        }
+
+    }
 }
