@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsageApi", "MemoryUsa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpuStress", "CpuStress\CpuStress.csproj", "{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryGenerationTypeApi", "MemoryGenerationTypeApi\MemoryGenerationTypeApi.csproj", "{3F82D6EF-03F1-4B4F-BDF3-E1D2BB6C0324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryUsageGenerationType", "MemoryUsageGeneretionType\MemoryUsageGenerationType.csproj", "{EB0BD727-7357-475C-856C-23A15F290396}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F82D6EF-03F1-4B4F-BDF3-E1D2BB6C0324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F82D6EF-03F1-4B4F-BDF3-E1D2BB6C0324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F82D6EF-03F1-4B4F-BDF3-E1D2BB6C0324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F82D6EF-03F1-4B4F-BDF3-E1D2BB6C0324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0BD727-7357-475C-856C-23A15F290396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0BD727-7357-475C-856C-23A15F290396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0BD727-7357-475C-856C-23A15F290396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0BD727-7357-475C-856C-23A15F290396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
