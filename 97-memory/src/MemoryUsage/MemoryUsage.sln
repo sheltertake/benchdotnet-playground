@@ -3,19 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsage", "MemoryUsage\MemoryUsage.csproj", "{2F4BB25E-7A30-4803-9B8C-57550E955BA9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsageBenchmark", "..\..\benchmarks\MemoryUsageBenchmark\MemoryUsageBenchmark.csproj", "{368A5FC6-457D-4F62-92E7-79C7F03E9FCD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsageApi", "MemoryUsageApi\MemoryUsageApi.csproj", "{F56A39F7-2326-497E-9E54-4C1076B97DF2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsageCli", "MemoryUsageCli\MemoryUsageCli.csproj", "{B3BA520F-B9FC-48E3-9688-5F7D59EBEF75}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpuStress", "CpuStress\CpuStress.csproj", "{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryStress", "MemoryStress\MemoryStress.csproj", "{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryUsageApi2", "MemoryUsageApi2\MemoryUsageApi2.csproj", "{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,34 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2F4BB25E-7A30-4803-9B8C-57550E955BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F4BB25E-7A30-4803-9B8C-57550E955BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F4BB25E-7A30-4803-9B8C-57550E955BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F4BB25E-7A30-4803-9B8C-57550E955BA9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{368A5FC6-457D-4F62-92E7-79C7F03E9FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{368A5FC6-457D-4F62-92E7-79C7F03E9FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{368A5FC6-457D-4F62-92E7-79C7F03E9FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{368A5FC6-457D-4F62-92E7-79C7F03E9FCD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F56A39F7-2326-497E-9E54-4C1076B97DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F56A39F7-2326-497E-9E54-4C1076B97DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F56A39F7-2326-497E-9E54-4C1076B97DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F56A39F7-2326-497E-9E54-4C1076B97DF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B3BA520F-B9FC-48E3-9688-5F7D59EBEF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3BA520F-B9FC-48E3-9688-5F7D59EBEF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3BA520F-B9FC-48E3-9688-5F7D59EBEF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3BA520F-B9FC-48E3-9688-5F7D59EBEF75}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B0F1E17-4980-4ECF-A137-9626F9CB40A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACAF912E-4508-40BC-9E4A-2BBBADDE108F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2185FAC-3EF8-4411-BDC3-F8DC78E026C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
