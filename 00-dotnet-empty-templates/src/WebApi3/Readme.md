@@ -1,0 +1,1 @@
+wrk -t12 -c400 -d30s --latency http://localhost:5000/WeatherForecast
