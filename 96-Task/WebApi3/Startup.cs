@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -20,6 +22,15 @@ namespace WebApi3 {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices (IServiceCollection services) {
+            //services.AddLogging(config =>
+            //{
+            //    // clear out default configuration
+            //    config.ClearProviders();
+            //});
+            // Inject IDbConnection, with implementation from SqlConnection class.
+            services.AddTransient<IDbConnection>((sp) => new SqlConnection("Server=LI-598;Database=test;User Id=sa;Password=YourStrong@Passw0rd;"));
+
+
             services.AddControllers ();
         }
 
